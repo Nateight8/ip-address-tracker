@@ -28,7 +28,7 @@ function Contents() {
     try {
       const getData = async () => {
         const res = await fetch(
-          "https://geo.ipify.org/api/v2/country,city?apiKey=at_RDbE5cngyOAq690PiVoV5iqo2Zo6H&ipAddress=104.132.26.255"
+          "https://geo.ipify.org/api/v2/country,city?apiKey=at_RDbE5cngyOAq690PiVoV5iqo2Zo6H&ipAddress="
         );
         const data = await res.json();
         setAddress(data);
@@ -72,12 +72,15 @@ function Contents() {
           }}
         >
           <Container maxWidth="sm">
-            <Stack alignItems="center" sx={{ width: "100%" }}>
+            <Stack
+              alignItems="center"
+              sx={{ width: "100%", paddingBlock: { xs: "2em", sm: 0 } }}
+            >
               <Typography
                 variant="h1"
                 sx={{
                   fontSize: { xs: "24px", sm: "38px" },
-                  marginBlock: "0.5em",
+                  marginBlock: "0.8em",
                 }}
               >
                 IP Address Tracker
